@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+        <script>
+            function pares(x, y) {
+                // Verifica se x é par (se não for, soma 1)
+                if (x % 2 != 0) {
+                    x++; // x passa a ser par
+                }
+                // Nesse ponto eu garanti que x é par
+                while (x <= y) {
+                    console.log(x);
+                    x += 2; // Soma 2, assim já vai para o próximo número par
+                }
+            }
+            pares(32, 321);
+        </script>
+    </body>
+</html>
