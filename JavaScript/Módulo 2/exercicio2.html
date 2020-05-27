@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+        
+        <button class='botao' onClick="gerarQuadrado()">Gerar novo</button>
+            
+        <div class="box"></div>
+
+        <script>
+
+            function gerarQuadrado() {
+
+                let boxElement = document.createElement("button");
+                boxElement.style.width = '180px';
+                boxElement.style.height = '180px';
+                boxElement.style.margin = '10px';
+                boxElement.style.backgroundColor = 'red';
+                boxElement.addEventListener('mouseover', function(){
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return this.style.background = color;
+                });
+
+            // Adiciona a classe .box na div criada
+            boxElement.classList.add('box');
+                document.body.appendChild(boxElement);
+            }
+
+        </script>
+    </body>
+</html>

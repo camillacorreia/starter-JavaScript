@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+        <div id="app">
+            
+        </div>
+        <script>
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href','https://titanci.com.br');
+            linkElement.setAttribute('target','_blank');
+
+            var textElement = document.createTextNode('Acessar');
+            linkElement.appendChild(textElement);
+
+            var containerElement  = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <ul class="lista"></ul>
+        </div>
+
+        <script>
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var listaUL = document.querySelector('div#app ul.lista');
+
+            function listarNomes(nomes) {
+                for (let i = 0; i <= nomes.length - 1; i++) {
+                    var item = document.createElement('li');
+                    item.textContent = nomes[i];
+                    listaUL.appendChild(item);
+                }
+            }
+
+            listarNomes(nomes)
+
+        </script>
+    </body>
+</html>

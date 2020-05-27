@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+        <button class='botao' onClick="gerarQuadrado()">Gerar novo</button>
+        <div id="app">
+            <div class="box"></div>
+        </div>
+        <script>
+
+            function gerarQuadrado() {
+
+                let boxElement = document.createElement("button");
+                boxElement.style.width = '180px';
+                boxElement.style.height = '180px';
+                boxElement.style.margin = '10px';
+                boxElement.style.backgroundColor = 'red';
+
+            // Adiciona a classe .box na div criada
+            boxElement.classList.add('box');
+                document.body.appendChild(boxElement);
+            }
+
+        </script>
+    </body>
+</html>

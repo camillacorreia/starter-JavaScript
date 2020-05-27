@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso JavaSscript</title>
+    </head>
+    <body>
+        
+        <input type="text" class="form-control" id="nome" placeholder="Nome">
+
+        <button type="submit" class="btn" onclick="adicionar()">Adicionar</button>
+
+        <div id="app"></div>
+
+        <script>
+
+            var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+            function adicionar() {
+            var inputElement = document.querySelector("#nome").value;
+
+            nomes.push(inputElement);
+            document.querySelector('#app').innerHTML = ""; // Esvazia a div
+            document.querySelector('#app').appendChild(list(nomes));
+            }
+
+            function list(array) {
+            //Cria a lista do elemento
+            var listElement = document.createElement("ul");
+
+            for (var i = 0; i < array.length; i++) {
+                //Cria a lista de item
+                var itemElement = document.createElement('li');
+
+                //Define seu conteúdo
+                itemElement.appendChild(document.createTextNode(array[i]));
+
+                //Adiciona um item a lista
+                listElement.appendChild(itemElement);
+            }
+            return listElement;
+            }
+
+            document.querySelector('#app').appendChild(list(nomes));
+
+        </script>
+    </body>
+</html>
