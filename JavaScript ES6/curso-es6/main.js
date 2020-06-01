@@ -1,20 +1,25 @@
-/* Const */
-const a = 1;
+const arr = [1, 3, 4, 5, 8, 9];
 
-/* Const - Mutação */
-const usuario = { nome: 'Camilla'};
+const newArr = arr.map(function(item, index){
+    return item + index;   
+});
 
-usuario.nome ='Jeferson';
+console.log(newArr);
 
-console.log(usuario);
+const sum =arr.reduce(function(total, next){
+    return total + next;
+});
 
-/* Let */
-function teste(x){
-    let y = 2;
+console.log(sum);
 
-    if(x > 5){
-        let y = 4;
-        console.log(x, y);
-    }
-}
-teste(10);
+const filter =arr.filter(function(item){
+    return item % 2 === 0;
+});
+
+console.log(filter);
+
+const find = arr.find(function(item){
+    return item === 4;
+});
+
+console.log(find);
