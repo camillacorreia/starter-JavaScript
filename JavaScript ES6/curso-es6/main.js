@@ -1,30 +1,20 @@
-class List{
-    constructor(){
-        this.data = [];
-    }
+/* Const */
+const a = 1;
 
-    add(data){
-        this.data.push(data);
-        console.log(this.data);
-    }
-}
+/* Const - Mutação */
+const usuario = { nome: 'Camilla'};
 
-class TodoList extends List{
-    constructor(){
-        super();
+usuario.nome ='Jeferson';
 
-        this.usuario = 'Camilla';
-    }
+console.log(usuario);
 
-    mostraUsuario(){
-        console.log(this.usuario);
+/* Let */
+function teste(x){
+    let y = 2;
+
+    if(x > 5){
+        let y = 4;
+        console.log(x, y);
     }
 }
-
-const MinhaLista = new TodoList();
-
-document.getElementById('novotodo').onclick = function(){
-    MinhaLista.add('Novo todo');
-}
-
-MinhaLista.mostraUsuario();
+teste(10);
