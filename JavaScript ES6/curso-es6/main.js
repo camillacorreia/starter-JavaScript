@@ -1,25 +1,21 @@
 const arr = [1, 3, 4, 5, 8, 9];
 
-const newArr = arr.map(function(item, index){
-    return item + index;   
-});
+const newArr = arr.map(item => item + 2);
 
 console.log(newArr);
 
-const sum =arr.reduce(function(total, next){
-    return total + next;
-});
+const teste = () => ({ nome: 'Camilla'});
 
-console.log(sum);
+console.log(teste());
 
-const filter =arr.filter(function(item){
-    return item % 2 === 0;
-});
+const testedois = () => [[1,2,3,4,5]];
 
-console.log(filter);
+console.log(testedois());
 
-const find = arr.find(function(item){
-    return item === 4;
-});
+const testetres = () => 'Nandes';
 
-console.log(find);
+console.log(testetres());
+
+const testequatro = () => 3;
+
+console.log(testequatro());
