@@ -5,4 +5,4 @@ const ProductController = require("./controllers/ProductController");
 
 routes.get("/products", ProductController.index);
 
-module.exposts = routes;
+module.exports = routes;
