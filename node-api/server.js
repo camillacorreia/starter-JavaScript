@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const requireDir =require('require-dir');
+const requireDir = require('require-dir');
 
 // Iniciando o App
 const app = express();
